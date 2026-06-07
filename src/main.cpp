@@ -141,6 +141,7 @@ int main(int argc, char **argv)
     QMetaObject::invokeMethod(&tracker, [&tracker, imageDirLocation]() {
         tracker.setFolder(imageDirLocation);
         tracker.setSubFolder(tracker.folder());
+        tracker.reindexSubFolder();
     });
 
     QQmlApplicationEngine engine;
